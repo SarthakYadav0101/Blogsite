@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Home from './Home';
 import Create from './Create';
-import BlogDetails from './BlogDetails';
 import './App.css';
 
 const App = () => {
@@ -69,14 +68,6 @@ const App = () => {
         <Create 
           onBlogAdd={handleBlogAdd}
           onCancel={() => setCurrentView('home')}
-        />
-      )}
-      
-      {currentView === 'details' && currentBlog && (
-        <BlogDetails 
-          blog={currentBlog}
-          onDelete={handleBlogDelete}
-          onBack={() => setCurrentView('home')}
         />
       )}
     </div>
